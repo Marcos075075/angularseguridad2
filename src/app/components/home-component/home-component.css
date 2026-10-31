@@ -1,0 +1,67 @@
+.home-hero {
+  background: #fff;
+}
+
+.home-hero h1 {
+  color: var(--ink);
+}
+
+.home-hero h1 span {
+  color: var(--primary);
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.hero-illustration {
+  position: relative;
+  min-height: 310px;
+  background: linear-gradient(145deg, #eaf0ff, #f8f9ff);
+}
+
+.hero-icon {
+  display: grid;
+  width: 150px;
+  height: 150px;
+  place-items: center;
+  border: 18px solid #d5deff;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #7d8cff);
+  box-shadow: 0 1rem 2rem rgba(54, 92, 245, .25);
+  font-size: 4rem;
+}
+
+.floating-card {
+  position: absolute;
+  padding: .7rem 1rem;
+  border: 1px solid #e8ebf3;
+  border-radius: .75rem;
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 .75rem 1.5rem rgba(23, 32, 51, .1);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.floating-card-top { top: 24%; right: 7%; color: #198754; }
+.floating-card-bottom { bottom: 20%; left: 7%; color: var(--primary); }
+
+.quick-card {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+  gap: .85rem;
+  padding: 1.25rem;
+}
+
+.quick-card strong { display: block; }
+.quick-card small { display: block; color: var(--muted); }
+.quick-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: .75rem; font-size: 1.3rem; }
+.quick-icon.blue { color: #365cf5; background: #edf1ff; }
+.quick-icon.purple { color: #8254d8; background: #f2edff; }
+.quick-icon.green { color: #15966a; background: #e7f8f1; }

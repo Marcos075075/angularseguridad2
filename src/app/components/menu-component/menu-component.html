@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg app-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" [routerLink]="['/home']">
+      <span class="brand-mark">S</span>
+      <span>Seguridad<span class="brand-dot">.</span></span>
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -13,34 +16,42 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0 ms-lg-4 gap-lg-1">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['/home']">Home</a>
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['/']">Login</a>
+          <a class="nav-link" [routerLink]="['/']" routerLinkActive="active">Acceso</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['/perfil']">Mi Perfil</a>
+          <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Mi perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['/subordinados']">Subordinados</a>
+          <a class="nav-link" [routerLink]="['/subordinados']" routerLinkActive="active">Equipo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['/signal']">Signal</a>
+          <a class="nav-link" [routerLink]="['/signal']" routerLinkActive="active">Contador</a>
         </li>
-        <h3 style="color: fuchsia">Contador: {{ contador() }}</h3>
-        @if (usuario(); as dato) {
-          <h3 style="color: blue">
-            {{ dato.apellido }}
-          </h3>
-        } @else {
-          <h3 style="color: red">Sin login</h3>
-        }
       </ul>
-      <button class="btn btn-outline-danger" type="button" (click)="logOutEmpleado()">
-        Log out
-      </button>
+      <div class="d-flex align-items-center gap-3">
+        <div class="user-summary d-none d-sm-flex align-items-center gap-2">
+          <span class="user-avatar">
+            @if (usuario(); as dato) { {{ dato.apellido.charAt(0) }} } @else { ? }
+          </span>
+          <div class="lh-sm">
+            @if (usuario(); as dato) {
+              <span class="user-name d-block">{{ dato.apellido }}</span>
+              <small>Sesión activa</small>
+            } @else {
+              <span class="user-name d-block">Invitado</span>
+              <small>Sin iniciar sesión</small>
+            }
+          </div>
+        </div>
+        <button class="btn btn-logout" type="button" (click)="logOutEmpleado()">
+          <span aria-hidden="true">↪</span> Salir
+        </button>
+      </div>
     </div>
   </div>
 </nav>

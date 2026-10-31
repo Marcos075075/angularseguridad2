@@ -1,17 +1,19 @@
-<h1 style="color:blue">Mi perfil</h1>
+<div class="page-heading">
+  <span class="eyebrow">CUENTA</span>
+  <h1>Mi perfil</h1>
+  <p>Información personal y detalles de tu puesto.</p>
+</div>
 @if (empleado){
-    <ul class="list-group">
-        <li class="list-group-item">
-            Apellido: {{empleado.apellido}}
-        </li>
-        <li class="list-group-item">
-            Oficio: {{empleado.oficio}}
-        </li>        
-        <li class="list-group-item">
-            Salario: {{empleado.salario}}
-        </li>        
-        <li class="list-group-item">
-            Jefe: {{empleado.director}}
-        </li>        
-    </ul>
+  <section class="profile-card surface-card">
+    <div class="profile-header">
+      <div class="profile-avatar">{{ empleado.apellido.charAt(0) }}</div>
+      <div><h2>{{ empleado.apellido }}</h2><span class="badge rounded-pill text-bg-primary">{{ empleado.oficio }}</span></div>
+    </div>
+    <div class="profile-details">
+      <div><span class="detail-label">APELLIDO</span><strong>{{ empleado.apellido }}</strong></div>
+      <div><span class="detail-label">OFICIO</span><strong>{{ empleado.oficio }}</strong></div>
+      <div><span class="detail-label">SALARIO</span><strong>{{ empleado.salario | number }} €</strong></div>
+      <div><span class="detail-label">JEFE DIRECTO</span><strong>{{ empleado.director }}</strong></div>
+    </div>
+  </section>
 }

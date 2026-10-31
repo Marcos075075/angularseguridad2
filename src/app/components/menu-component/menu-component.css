@@ -1,0 +1,80 @@
+.app-navbar {
+  min-height: 76px;
+  border-bottom: 1px solid rgba(230, 234, 242, .9);
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(14px);
+}
+
+.navbar-brand {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: var(--primary);
+}
+
+.brand-mark,
+.user-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .7rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #6b7fff);
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+}
+
+.brand-dot {
+  color: var(--primary);
+}
+
+.nav-link {
+  padding: .55rem .85rem !important;
+  border-radius: .6rem;
+  color: #667085;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+  background: #eef1ff;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: .85rem;
+}
+
+.user-name {
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.user-summary small {
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+.btn-logout {
+  border: 1px solid #ffd4d8;
+  border-radius: .65rem;
+  color: #c93443;
+  background: #fff5f5;
+  font-weight: 700;
+}
+
+.btn-logout:hover {
+  color: #fff;
+  background: #d94b58;
+}

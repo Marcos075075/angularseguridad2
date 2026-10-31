@@ -1,13 +1,13 @@
-<p>ejemplo-signal-component works!</p>
-<h2 style="color:blue">
-    Contador: {{ contador() }}
-</h2>
-<h2 style="color:red">
-    Doble {{ doble() }}
-</h2>
-<button (click)="reiniciarContador()">
-    Reiniciar
-</button>
-<button (click)="incrementarContador()">
-    Incrementar
-</button>
+<div class="page-heading"><span class="eyebrow">TIEMPO REAL</span><h1>Contador de actividad</h1><p>Prueba el estado reactivo de la aplicación.</p></div>
+<section class="signal-card surface-card text-center">
+  <div class="signal-orbit"><div class="signal-number">{{ contador() }}</div></div>
+  <span class="signal-label">VALOR ACTUAL</span>
+  <div class="row g-3 mt-3 mb-4">
+    <div class="col-6"><div class="metric-box"><strong>{{ contador() }}</strong><small>Contador</small></div></div>
+    <div class="col-6"><div class="metric-box"><strong>{{ doble() }}</strong><small>Valor doble</small></div></div>
+  </div>
+  <div class="d-flex justify-content-center gap-2 flex-wrap">
+    <button class="btn btn-outline-secondary" (click)="reiniciarContador()">Reiniciar</button>
+    <button class="btn btn-primary px-4" (click)="incrementarContador()">Incrementar <span>＋</span></button>
+  </div>
+</section>

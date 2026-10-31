@@ -1,1 +1,28 @@
-<h1>COMPONENTE HOME</h1>
+<section class="home-hero surface-card overflow-hidden">
+  <div class="row align-items-center g-0">
+    <div class="col-lg-7 p-4 p-md-5">
+      <span class="eyebrow">PANEL DE CONTROL</span>
+      <h1 class="display-5 fw-bold mt-3">Todo bajo control,<br><span>desde un solo lugar.</span></h1>
+      <p class="lead text-secondary mt-3 mb-4">
+        Gestiona tu perfil, consulta tu equipo y mantén una visión clara de la seguridad de tu organización.
+      </p>
+      <a class="btn btn-primary px-4 py-2" [routerLink]="['/perfil']">Ver mi perfil <span>→</span></a>
+    </div>
+    <div class="col-lg-5 hero-illustration d-flex align-items-center justify-content-center">
+      <div class="hero-icon">✦</div>
+      <div class="floating-card floating-card-top">✓ Sistema protegido</div>
+      <div class="floating-card floating-card-bottom">24/7 Monitorización</div>
+    </div>
+  </div>
+</section>
+<div class="row g-4 mt-1">
+  <div class="col-md-4">
+    <div class="quick-card surface-card"><span class="quick-icon blue">◉</span><strong>Perfil personal</strong><small>Consulta tus datos</small></div>
+  </div>
+  <div class="col-md-4">
+    <div class="quick-card surface-card"><span class="quick-icon purple">♧</span><strong>Tu equipo</strong><small>Gestiona subordinados</small></div>
+  </div>
+  <div class="col-md-4">
+    <div class="quick-card surface-card"><span class="quick-icon green">↗</span><strong>Actividad</strong><small>Revisa tus señales</small></div>
+  </div>
+</div>
