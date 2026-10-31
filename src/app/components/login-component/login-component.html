@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<form #formLogin="ngForm">
+    <label> Nombre de usuario </label>
+    <input type="text" name="cajauser" #cajauser required class="form-control"/>
+    <label> Contraseña </label>
+    <input type="password" name="cajapass" #cajapass required class="form-control"/>
+    <button type="submit" class="btn btn-warning" (click)="loginEmpleado()">Log in</button>
+</form>
+{{mensaje}}
